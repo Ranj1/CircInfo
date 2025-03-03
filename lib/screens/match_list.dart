@@ -1,9 +1,12 @@
+import 'package:assignment_test/constant/app_colors.dart';
 import 'package:assignment_test/models/countryy_flag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/match_bloc.dart';
 import '../bloc/match_state.dart';
 import '../bloc/match_event.dart';
+import '../constant/app_dimensions.dart';
+import '../constant/app_styles.dart';
 import '../models/match_model.dart';
 import 'match_details.dart';
 
@@ -12,7 +15,7 @@ class MatchListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Dispatch the event to fetch matches.
+
     context.read<MatchBloc>().add(FetchAllMatches());
 
     return Scaffold(
@@ -62,12 +65,12 @@ Card buildCard(MatchDetail match,List<CountryFlag> countryFlags,BuildContext con
           Column(
             children: [
               ListTile(
-                tileColor: Colors.black,
+                tileColor: AppColors.myColor,
                 title: Text(heading,
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: AppStyles.primaryTextWhite,
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: AppDimensions.getHeight(context,percentage: 0.02)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -75,12 +78,12 @@ Card buildCard(MatchDetail match,List<CountryFlag> countryFlags,BuildContext con
                   TeamScore(teamList[1].nameFull, flagB , "${match.innings[1].total} / ${match.innings[1].wickets}", "(${match.innings[1].overs})"),
                 ],
               ),
-              SizedBox(height: 16),
-              Text(match.matchdetail.result, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-              Text(match.matchdetail.series.name, style: TextStyle(fontSize: 14, color: Colors.grey)),
+              SizedBox(height:AppDimensions.getHeight(context,percentage: 0.01)),
+              Text(match.matchdetail.result, style: AppStyles.primaryTitleBlack),
+              Text(match.matchdetail.series.name, style:AppStyles.secondaryTextGrey ),
             ],
           ),
-          SizedBox(height: 16),
+          SizedBox(height: AppDimensions.getHeight(context,percentage: 0.03)),
           //Spacer(),
           GestureDetector(
             onTap: () {
@@ -104,8 +107,8 @@ Card buildCard(MatchDetail match,List<CountryFlag> countryFlags,BuildContext con
                   ),
                   child: Center(
                     child: Text(
-                      "More about this game",
-                      style: TextStyle(fontSize: 14),
+                      "See More",
+                      style: AppStyles.secondaryTextBlack,
                     ),
                   ),
                 ),
@@ -114,7 +117,7 @@ Card buildCard(MatchDetail match,List<CountryFlag> countryFlags,BuildContext con
                 Container(
                   padding: EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: Colors.black, // Background color to overlap the border
+                    color: Colors.black,
                     shape: BoxShape.circle,
                   ),
                   child: Icon(Icons.keyboard_arrow_down, size: 24, color: Colors.white),
@@ -138,9 +141,9 @@ class TeamScore extends StatelessWidget {
     return Column(
       children: [
         Text(flagPath, style: TextStyle(fontSize: 30)),
-        Text(teamName, style: TextStyle(fontSize: 16,)),
-        Text(score, style: TextStyle(fontSize: 20)),
-        Text(overs, style: TextStyle(fontSize: 14, color: Colors.grey)),
+        Text(teamName, style: AppStyles.primaryTextBlack),
+        Text(score, style: AppStyles.primaryTextBlack),
+        Text(overs, style: AppStyles.primaryTextGrey),
       ],
     );
   }

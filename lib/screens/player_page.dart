@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../models/match_model.dart';
 
 class PlayerPage extends StatefulWidget {

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 class SummaryPage extends StatelessWidget {
-  // The "Notes" data from your JSON as a Map
   final Map<String, List<String>> notes;
 
   const SummaryPage({Key? key, required this.notes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // We assume the notes map has keys "1" and "2"
+
     return DefaultTabController(
-      length: 2, // Two tabs for the two notes lists
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -22,9 +21,9 @@ class SummaryPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            // Tab for key "1"
+
             _buildNotesList(notes["1"] ?? []),
-            // Tab for key "2"
+
             _buildNotesList(notes["2"] ?? []),
           ],
         ),
@@ -33,7 +32,7 @@ class SummaryPage extends StatelessWidget {
 
   }
 
-  /// Builds a scrollable list of note strings with a divider between them.
+
   Widget _buildNotesList(List<String> notesList) {
     return ListView.separated(
       padding: const EdgeInsets.all(8.0),

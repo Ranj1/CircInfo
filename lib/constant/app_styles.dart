@@ -12,8 +12,16 @@ class AppStyles {
     textStyle: const TextStyle(color: AppColors.white, fontSize: 16, fontWeight: FontWeight.normal),
   );
 
+  static TextStyle primaryTextBlack = GoogleFonts.manrope(
+    textStyle: const TextStyle(color: AppColors.black, fontSize: 16, fontWeight: FontWeight.normal),
+  );
+
+  static TextStyle primaryTextGrey = GoogleFonts.manrope(
+    textStyle: const TextStyle(color: AppColors.grey, fontSize: 16, fontWeight: FontWeight.normal),
+  );
+
   static TextStyle primaryTitleBlack = GoogleFonts.manrope(
-    textStyle: const TextStyle(color: AppColors.black, fontSize: 24, fontWeight: FontWeight.bold),
+    textStyle: const TextStyle(color: AppColors.black, fontSize: 14, fontWeight: FontWeight.bold),
   );
 
   static TextStyle primaryTitleWhite = GoogleFonts.manrope(
@@ -22,6 +30,14 @@ class AppStyles {
 
   static TextStyle secondaryTextGrey = GoogleFonts.manrope(
     textStyle: const TextStyle(color: AppColors.grey, fontSize: 14, fontWeight: FontWeight.normal),
+  );
+
+  static TextStyle secondaryTextBlack = GoogleFonts.manrope(
+    textStyle: const TextStyle(color: AppColors.black, fontSize: 14, fontWeight: FontWeight.normal),
+  );
+
+  static TextStyle secondaryTextWhite = GoogleFonts.manrope(
+    textStyle: const TextStyle(color: AppColors.white, fontSize: 14, fontWeight: FontWeight.normal),
   );
 
   static TextStyle buttonTextBlack = GoogleFonts.manrope(

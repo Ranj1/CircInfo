@@ -1,5 +1,6 @@
 // lib/main.dart
 import 'package:assignment_test/screens/match_list.dart';
+import 'package:assignment_test/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'repository/match_repository.dart';
@@ -20,10 +21,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Match Details',
-      home: BlocProvider(
-        create: (_) => MatchBloc(repository: repository),
-        child: const MatchListScreen(),
-      ),
+      // home: BlocProvider(
+      //   create: (_) => MatchBloc(repository: repository),
+      //   child: const MatchListScreen(),
+      // ),
+      home: SplashScreen(repository: repository),
     );
   }
 }
