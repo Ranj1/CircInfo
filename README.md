@@ -1,6 +1,6 @@
 # Sportz Interactive App
 
-Hey there! This is a cool Flutter project that fetches live cricket match details using two demo APIs (yes, we're talking about those exciting IND vs PAK clashes). We built this app with the BLoC pattern to keep things neat and dynamic.
+Hey there! This is a cool Flutter project that fetches live cricket match details using two demo APIs. We built this app with the BLoC pattern to keep things neat and dynamic.
 
 ## What It Does
 
