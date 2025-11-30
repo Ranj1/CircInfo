@@ -21,8 +21,8 @@ Hey there! This is a cool Flutter project that fetches live cricket match detail
 
 1. **Fetching Data:**  
    The app calls two APIs:  
-   - `https://demo.sportz.io/sapk01222019186652.json`  
-   - `https://demo.sportz.io/nzin01312019187360.json`  
+   - `https://ranjanatiwari.com/cric_info/sapk01222019186652.json` 
+   - `https://ranjanatiwari.com/cric_info/nzin01312019187360.json`  
    Data is parsed into models and fed into the BLoC.
 
 2. **State Management:**  
