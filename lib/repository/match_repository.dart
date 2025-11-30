@@ -4,8 +4,11 @@ import '../models/match_model.dart';
 
 class MatchRepository {
 
-  final String url1 = "https://demo.sportz.io/sapk01222019186652.json";
-  final String url2 = "https://demo.sportz.io/nzin01312019187360.json";
+  // final String url1 = "https://demo.sportz.io/sapk01222019186652.json";
+  // final String url2 = "https://demo.sportz.io/nzin01312019187360.json";
+
+  final String url1 = "https://ranjanatiwari.com/cric_info/sapk01222019186652.json";
+  final String url2 = "https://ranjanatiwari.com/cric_info/nzin01312019187360.json";
 
   Future<MatchDetail> fetchMatchDetail(String url) async {
     final response = await http.get(Uri.parse(url));
