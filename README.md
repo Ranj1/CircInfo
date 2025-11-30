@@ -1,4 +1,4 @@
-# Sportz Interactive App
+# CircInfo App
 
 Hey there! This is a cool Flutter project that fetches live cricket match details using two demo APIs. We built this app with the BLoC pattern to keep things neat and dynamic.
 
@@ -43,7 +43,7 @@ Hey there! This is a cool Flutter project that fetches live cricket match detail
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Ranj1/sportz_interactive
+   git clone https://github.com/Ranj1/circInfo
    cd sportz_interactive
    ```
 
