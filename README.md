@@ -43,8 +43,8 @@ Hey there! This is a cool Flutter project that fetches live cricket match detail
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Ranj1/sportz_interactive_test
-   cd sportz_interactive_test
+   git clone https://github.com/Ranj1/sportz_interactive
+   cd sportz_interactive
    ```
 
 2. **Install dependencies:**
